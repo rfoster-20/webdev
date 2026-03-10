@@ -21,11 +21,11 @@
     </div>
 
     <div class="menu" id="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="testimonials.html">TESTIMONIALS</a>
+      <a href="index.html#contact">CONTACT</a>
     </div>
   </nav>
 </header>
@@ -46,17 +46,14 @@
     </div>
   </footer>
 
+
+  <!-- Hamburger toggle -->
 <script>
-  // Hamburger toggle
   const hamburger = document.getElementById('hamburger');
   const menu = document.getElementById('menu');
 
   hamburger.addEventListener('click', () => {
-    if (menu.style.display === 'flex') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'flex';
-    }
+    menu.classList.toggle('show'); // toggle smooth max-height
   });
 
   // Dropdown toggle on mobile
@@ -64,9 +61,9 @@
   dropdowns.forEach(drop => {
     drop.addEventListener('click', function(e){
       if(window.innerWidth <= 768){
-        e.preventDefault(); // prevent navigation
+        e.preventDefault(); 
         const parent = this.parentElement;
-        parent.classList.toggle('open');
+        parent.classList.toggle('open'); 
       }
     });
   });

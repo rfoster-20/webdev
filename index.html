@@ -20,26 +20,27 @@
     </div>
 
     <div class="menu" id="menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="testimonials.html">TESTIMONIALS</a>
+      <a href="index.html#contact">CONTACT</a>
     </div>
   </nav>
 </header>
 
  <!-- HERO -->
   <section class="hero">
-	<h1>Change your mindset</h1>
-	<p>Live the life you deserve</p>
-	<button>Book Consultation</button>
+	<h1>Welcome to Kelula Hypnotherapy</h1>
+	<p>Change your mindset. Live the life you deserve.</p>
+	<button>Contact Us</button>
   </section>
 
  <!-- ABOUT -->
   <section class="about">
     <div class="container">
       <h2>About Me</h2>
+	  <div class="about-text">
       <p>My name is Rebecca Middlehurst. I am a student hypnotherapist training in Solution Focused Hypnotherapy with the award winning SFTA. </p>
 
 <p>Well done on taking the first step to achieving the life you absolutely deserve. </p>
@@ -47,6 +48,7 @@
 <p>Solution Focused Hypnotherapy is a very positive and gentle therapy that uses Neuroscience research and the latest techniques to enable each client to navigate their own goals and create their own future. </p>
 
 <p>I can help you change your mindset by helping you understand your brain- allowing you to reshape your life and lift the barriers that are preventing you from reaching your personal goals.</p>
+</div>
     </div>
   </section>
 
@@ -71,6 +73,10 @@
           <h3>Confidence & Self-Esteem</h3>
           <p>Build lasting confidence and positive self-image with personalized sessions.</p>
         </div>
+		        <div class="card">
+          <h3>Confidence & Self-Esteem123</h3>
+          <p>Build lasting confidence and positive self-image with personalized sessions.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -88,6 +94,13 @@
           <p>"I feel calmer, more confident, and happier thanks to the sessions. Truly life-changing."</p>
           <span>- James K.</span>
         </div>
+		        <div class="testimonial-card">
+          <p>"I feel cfsdfsdfsdfsdfdsfsd fdgfdg dfg almer, more confident, and happier thanks to the sessions. Truly life-changing."</p>
+          <span>- Jimmy K.</span>
+        </div>
+				        <div class="testimonial-card">
+          <p>"I feel cfsdfsdfsdfsdfdsfsd fdgfdg dfg almer, more confident, and happier thanks to the sessions. Truly life-changing."</p>
+          <span>- Jimmy K.</span>
       </div>
     </div>
   </section>
@@ -113,17 +126,13 @@
     </div>
   </footer>
 
+  <!-- Hamburger toggle -->
 <script>
-  // Hamburger toggle
   const hamburger = document.getElementById('hamburger');
   const menu = document.getElementById('menu');
 
   hamburger.addEventListener('click', () => {
-    if (menu.style.display === 'flex') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'flex';
-    }
+    menu.classList.toggle('show'); // toggle smooth max-height
   });
 
   // Dropdown toggle on mobile
@@ -131,9 +140,9 @@
   dropdowns.forEach(drop => {
     drop.addEventListener('click', function(e){
       if(window.innerWidth <= 768){
-        e.preventDefault(); // prevent navigation
+        e.preventDefault(); 
         const parent = this.parentElement;
-        parent.classList.toggle('open');
+        parent.classList.toggle('open'); 
       }
     });
   });
