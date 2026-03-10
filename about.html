@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Hypnotherapy Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+<header>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Hypnotherapy Logo"></a>
+    </div>
+
+    <!-- Hamburger menu button -->
+    <div class="hamburger" id="hamburger">
+      &#9776; <!-- ☰ symbol -->
+    </div>
+
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <div class="container">
+      <h1>About Me</h1>
+      <p>Hello! I am a certified hypnotherapist dedicated to helping clients overcome stress, anxiety, unwanted habits, and build confidence. My approach is gentle, personalized, and effective, designed to create lasting positive change.</p>
+      <p>I use techniques backed by research and years of experience to guide clients toward achieving their goals and improving overall wellbeing. Your journey to a calmer, healthier, and more confident life starts here.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Hypnotherapy Practice | Privacy Policy | Terms</p>
+    </div>
+  </footer>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  });
+
+  // Dropdown toggle on mobile
+  const dropdowns = document.querySelectorAll('.dropdown > a');
+  dropdowns.forEach(drop => {
+    drop.addEventListener('click', function(e){
+      if(window.innerWidth <= 768){
+        e.preventDefault(); // prevent navigation
+        const parent = this.parentElement;
+        parent.classList.toggle('open');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

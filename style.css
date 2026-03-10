@@ -1,0 +1,322 @@
+/* GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: #ebebeb;
+  padding: 15px 40px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.menu a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #004a80;   /* highlight links with same blue */
+}
+
+/* HERO */
+.hero {
+  font-family: "Times New Roman", Times, serif;  /* changed font */
+  background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('hero-bg.png') no-repeat center center;
+  background-size: cover;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+.hero button {
+  background-color: #004a80;   /* changed from green to blue */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background-color: #003366;   /* slightly darker blue on hover */
+}
+
+/* ABOUT */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* SERVICES */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 60px 20px;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact input, .contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* CONTACT BUTTON */
+.contact button {
+  background-color: #004a80;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background-color: #003366;
+}
+
+/* FOOTER */
+footer {
+  background: #ebebeb;
+  padding: 20px;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+  .service-cards, .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 { font-size: 2.25rem; }
+  .hero p { font-size: 1rem; }
+}
+
+@media(max-width: 480px){
+  .hero h1 { font-size: 1.75rem; }
+  .hero p { font-size: 0.9rem; }
+  .hero button { padding: 10px 20px; font-size: 0.85rem; }
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown a {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #ebebeb;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Small screen: dropdown becomes clickable */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown-content {
+    position: static;
+    width: 100%;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none; /* disable hover effect on mobile */
+  }
+
+  .dropdown > a {
+    width: 100%;
+  }
+}
+
+/* SERVICES CARDS HOVER 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  border-top: 3px solid #004a80; 
+  transition: all 0.3s ease;
+}
+
+TESTIMONIAL CARDS HOVER 
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  border-left: 3px solid #004a80;
+  transition: all 0.3s ease;
+} */
+
+/* Hamburger Button */
+.hamburger {
+  display: none; /* hidden by default */
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  color: #004a80;
+}
+
+/* MENU FOR MOBILE */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    width: 100%;
+    background-color: #ebebeb;
+    padding: 10px 0;
+  }
+
+  .menu a {
+    margin: 10px 20px;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none; /* hide dropdowns initially */
+    background-color: #f9f9f9;
+    width: 100%;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block; /* show dropdown when active */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+}

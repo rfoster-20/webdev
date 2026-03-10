@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Hypnotherapy Practice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+<header>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Hypnotherapy Logo"></a>
+    </div>
+
+    <!-- Hamburger menu button -->
+    <div class="hamburger" id="hamburger">
+      &#9776; <!-- ☰ symbol -->
+    </div>
+
+    <div class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+  <!-- SERVICES SECTION -->
+  <section class="services">
+    <div class="container">
+      <h1>Our Services</h1>
+
+      <div id="stop-smoking" class="card">
+        <h2>Stop Smoking</h2>
+        <p>Hypnotherapy sessions designed to help you quit smoking and improve your overall health. Personalized plans and guided techniques ensure long-term success.</p>
+      </div>
+
+      <div id="weight-loss" class="card">
+        <h2>Weight Loss</h2>
+        <p>Supportive hypnotherapy to help you manage cravings, improve eating habits, and achieve your healthy weight goals effectively and sustainably.</p>
+      </div>
+
+      <div id="anxiety" class="card">
+        <h2>Anxiety & Stress</h2>
+        <p>Learn relaxation and coping techniques through hypnotherapy sessions to reduce stress, calm anxiety, and improve your mental wellbeing.</p>
+      </div>
+
+      <div id="confidence" class="card">
+        <h2>Confidence & Self-Esteem</h2>
+        <p>Build lasting confidence and a positive self-image with guided hypnotherapy sessions tailored to your individual needs.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Hypnotherapy Practice | Privacy Policy | Terms</p>
+    </div>
+  </footer>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    if (menu.style.display === 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  });
+
+  // Dropdown toggle on mobile
+  const dropdowns = document.querySelectorAll('.dropdown > a');
+  dropdowns.forEach(drop => {
+    drop.addEventListener('click', function(e){
+      if(window.innerWidth <= 768){
+        e.preventDefault(); // prevent navigation
+        const parent = this.parentElement;
+        parent.classList.toggle('open');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
